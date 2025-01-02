@@ -1,8 +1,6 @@
-# React + Vite
+Iaê, jovem, tudo bem? Vou explicar o que será esse projeto. Será para as federações, associações organizarem o dojo por atleta, faixa e assim vai. E postar eventos.
+Simples, né? Porém, muito útil! 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Qual tecnologia vou utilizar?
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+ReactJS, Styled Components, Material UI, Formik, vite, ...
