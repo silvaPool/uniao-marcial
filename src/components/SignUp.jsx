@@ -1,4 +1,7 @@
 import { useState } from "react";
+import { signInWithPopup,GoogleAuthProvider } from "firebase/auth";
+import { createUserWithEmailAndPassword} from "firebase/auth";
+import { auth } from "../services/firebaseConfig";
 
 const SignupWithEmail = () => {
   const [email, setEmail] = useState("");
@@ -106,7 +109,11 @@ const SignupWithEmail = () => {
         </div>
         <button type="submit">Sign Up</button>
       </form>
+      <form onSubmit={handleSignIn}>
+        <button type="submit">Sign In with Email</button>
+      </form>
       <button onClick={handleGoogleSignup}>Sign Up with Google</button>
+      <button onClick={handleSignOut}>Sign Out</button>
     </div>
   );
 };
