@@ -25,6 +25,27 @@ const SignupWithEmail = () => {
     }
   };
 
+  const handleSignIn = async (e) => {
+    e.preventDefault();
+    if (!email || !password) {
+      console.error("Provide Email and Password");
+      return;
+    }
+    try {
+      const userCredential = await signInWithEmailAndPassword(
+        auth,
+        email,
+        password
+      );
+      const user = userCredential.user;
+      console.log(user);
+    } catch (error) {
+      const errorCode = error.errorCode;
+      const errorMessage = error.message;
+      console.log("errorCode:", errorCode, "errorMessage:", errorMessage);
+    }
+  };
+
   const handleGoogleSignup = async () => {
     try {
       const provider = new GoogleAuthProvider();
@@ -39,38 +60,53 @@ const SignupWithEmail = () => {
       const user = result.user;
       console.log(user, token);
     } catch (error) {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        const email = error.customData.email;
-        const credential = GoogleAuthProvider.credentialFromError(error);
-        console.error("Google Signup Error:", errorCode, errorMessage, email, credential);
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      const email = error.customData.email;
+      const credential = GoogleAuthProvider.credentialFromError(error);
+      console.error(
+        "Google Signup Error:",
+        errorCode,
+        errorMessage,
+        email,
+        credential
+      );
     }
+  };
+
+  const handleSignOut = () => {
+    const authInstance = getAuth();
+    signOut(authInstance).then(() => {
+        console.log("Sign-out successful.");
+    }).catch((error) => {
+        console.error("Error signing out:", error);
+    });
   };
 
   return (
     <div>
-    <form onSubmit={handleSignup}>
-      <div>
-        <label>Email:</label>
-        <input
-          type="text"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-        />
-      </div>
-      <div>
-        <label>Password:</label>
-        <input
-          type="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          required
-        />
-      </div>
-      <button type="submit">Sign Up</button>
-    </form>
-    <button onClick={handleGoogleSignup}>Sign Up with Google</button>
+      <form onSubmit={handleSignup}>
+        <div>
+          <label>Email:</label>
+          <input
+            type="text"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+        </div>
+        <div>
+          <label>Password:</label>
+          <input
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+        </div>
+        <button type="submit">Sign Up</button>
+      </form>
+      <button onClick={handleGoogleSignup}>Sign Up with Google</button>
     </div>
   );
 };
