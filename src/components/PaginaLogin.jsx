@@ -9,9 +9,9 @@ function PaginaLogin() {
         <Typography sx={{ fontSize: "60px", fontFamily: "Dancing Script" }}>
           União Marcial
         </Typography>
-        {/* <Typography sx={{fontSize: '15px', textWrap: 'balance'}}>
-        Plataforma para federações organizarem dojos por atleta, faixa e categoria, além de publicar eventos e conectar a comunidade.
-        </Typography> */}
+        <Typography sx={{ fontSize: "23px", textWrap: "balance", fontFamily: 'Dancing Script', textAlign: 'center' }}>
+          Organize, simplifique e conecte!
+        </Typography>
       </Box>
 
       <Box>
