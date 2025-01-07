@@ -3,23 +3,14 @@ import styled from "styled-components";
 
 const StyledBoxLogin = styled(Box)`
   && {
-    background: #000000; 
-    background: -webkit-linear-gradient(
-      to right,
-      #434343,
-      #000000
-    ); 
-    background: linear-gradient(
-      to right,
-      #434343,
-      #000000
-    ); 
+    background: #1a1a1a;
     height: 100vh;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    padding: 10px;
+    gap: 50px;
     color: white;
+    /* padding: 20px; */
   }
 `;
 

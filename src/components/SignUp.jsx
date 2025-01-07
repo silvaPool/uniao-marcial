@@ -2,7 +2,7 @@ import { useState } from "react";
 import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../services/firebaseConfig";
-import StyledWrapperForm from "./StyledWrapperform";
+
 
 const SignupWithEmail = () => {
   const [email, setEmail] = useState("");

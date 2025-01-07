@@ -7,7 +7,9 @@
 /* form */
 
 .form-box {
-  max-width: 300px;
+  /* max-width: 300px; */
+  width: 30vw;
+  height: 60vh;
   background: #f1f7fe;
   overflow: hidden;
   border-radius: 16px;
