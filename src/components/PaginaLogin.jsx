@@ -1,5 +1,6 @@
 import { Box, Typography } from "@mui/material";
 import StyledBoxLogin from "./StyledBoxLogin";
+import SignupWithEmail from "./SignUp";
 
 function PaginaLogin() {
   return (
@@ -11,7 +12,7 @@ function PaginaLogin() {
       </Box>
 
       <Box>
-        Login aqui
+       <SignupWithEmail />
       </Box>
     </StyledBoxLogin>
   );
