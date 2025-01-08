@@ -16,6 +16,7 @@
     "@mui/icons-material": "^6.3.0",
     "@mui/material": "^6.3.0",
     "@mui/styled-engine-sc": "^6.3.0",
+    "@mui/toolpad": "^0.1.51",
     "@stytch/react": "^19.1.1",
     "@stytch/vanilla-js": "^5.10.1",
     "firebase": "^11.1.0",
