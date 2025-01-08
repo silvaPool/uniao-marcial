@@ -2,13 +2,12 @@ import { useState } from "react";
 import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../services/firebaseConfig";
-import { Outlet, useNavigate } from "react-router";
+import { useNavigate } from "react-router";
 
 
-const SignupWithEmail = () => {
+const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [isLogin, setIsLogin] = useState(false);
 
   const navigate = useNavigate();
 
@@ -93,29 +92,22 @@ const SignupWithEmail = () => {
       });
   };
 
-  const handleSubmit = isLogin ? handleSignIn : handleSignup;
-
   return (
     <>
       <div class="form-box">
         <form class="form">
           <span class="title">Inscrever-se</span>
-          <span class="subtitle">
-            {isLogin ? "Entre com seu e-mail e senha." : "Crie uma conta gratuita com seu e-mail."}
-          </span>
+          <span class="subtitle">Crie uma conta gratuita com seu e-mail.</span>
           <div class="form-container">
             {/* <input type="text" class="input" placeholder="Full Name" /> */}
             <input type="email" class="input" placeholder="Email" />
             <input type="password" class="input" placeholder="Password" />
           </div>
-          <button type="submit">{isLogin ? "Login": "Inscrever-se"}</button>
+          <button>Inscrever-se</button>
         </form>
         <div class="form-section">
           <p>
-            {isLogin ? "Não tem uma conta?" : "Já tem uma conta?"}{" "}
-            <a onClick={() => setIsLogin(!isLogin)}>
-              {isLogin ? "Inscreva-se" : "Conecte-se"}
-            </a>         
+          Tenha uma conta? <a onClick={() => navigate("/login")}>Conecte-se</a>{" "}
           </p>
         </div>
       </div>
@@ -123,4 +115,4 @@ const SignupWithEmail = () => {
   );
 };
 
-export default SignupWithEmail;
+export default Login;
