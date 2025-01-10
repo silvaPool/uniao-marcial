@@ -1,7 +1,4 @@
 import { useContext, useState } from "react";
-import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
-import { createUserWithEmailAndPassword } from "firebase/auth";
-import { auth } from "../services/firebaseConfig";
 import { useNavigate } from "react-router";
 import { AuthContext } from "../context/AuthContext";
 import { ErrorMessage, Field, Formik } from "formik";
@@ -40,27 +37,47 @@ const Login = () => {
         }}
       >
         {(formik) => (
-          <form onSubmit={formik.handleSubmit}>
-            <div>Login</div>
+          <div class="form-box">
+            <form onSubmit={formik.handleSubmit} class="form">
+              <span class="title">Login</span>
+              <span class="subtitle">Entre e navegue</span>
 
-            <label htmlFor="email">Email</label>
-            <Field name="email" type="text" className="field" />
-            <ErrorMessage name="email" />
+              <div class="form-container">
+                {/* <label htmlFor="email">Email</label> */}
+                <Field
+                  name="email"
+                  type="text"
+                  class="input"
+                  placeholder="Email"
+                />
+                <ErrorMessage name="email" />
 
-            <label htmlFor="senha">Senha</label>
-            <Field name="senha" type="password" className="field" />
-            <ErrorMessage name="senha" />
+                {/* <label htmlFor="senha">Senha</label> */}
+                <Field
+                  name="senha"
+                  type="password"
+                  class="input"
+                  placeholder="password"
+                />
+                <ErrorMessage name="senha" />
+              </div>
 
-            <button type="submit">Submit</button>
+              <button type="submit">Submit</button>
+            </form>
 
-            <p class="signup-link">
-              Don't have an account?
-              <a class="signup-link link" onClick={() => navigate("/cadastro")}>
-                {" "}
-                Sign up now
-              </a>
-            </p>
-          </form>
+            <div class="form-section">
+              <p class="signup-link">
+                Don't have an account?
+                <a
+                  class="signup-link link"
+                  onClick={() => navigate("/cadastro")}
+                >
+                  {" "}
+                  Sign up now
+                </a>
+              </p>
+            </div>
+          </div>
         )}
       </Formik>
     </>

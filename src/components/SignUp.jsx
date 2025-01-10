@@ -1,7 +1,4 @@
 import { useContext, useState } from "react";
-import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
-import { createUserWithEmailAndPassword } from "firebase/auth";
-import { auth } from "../services/firebaseConfig";
 import { Outlet, useNavigate } from "react-router";
 import { AuthContext } from "../context/AuthContext";
 import { ErrorMessage, Field, Formik } from "formik";
@@ -37,29 +34,48 @@ const Cadastro = () => {
         }}
       >
         {(formik) => (
-          <form onSubmit={formik.handleSubmit}>
-            <div className="logo-form">Cadastro</div>
+          <div class="form-box">
+            <form onSubmit={formik.handleSubmit} class="form">
+              <span class="title">Cadastro</span>
+              <span class="subtitle">
+                Crie uma conta gratuita com seu e-mail.
+              </span>
 
-            <label htmlFor="email">Email Address</label>
-            <Field name="email" type="text" className="field" />
-            <ErrorMessage name="email" />
+              <div class="form-container">
+                {/* <label htmlFor="email">Email Address</label> */}
+                <Field
+                  name="email"
+                  type="text"
+                  className="input"
+                  placeholder="Email"
+                />
+                <ErrorMessage name="email" />
 
-            <label htmlFor="senha">Senha</label>
-            <Field name="senha" type="password" className="field" />
-            <ErrorMessage name="senha" />
+                {/* <label htmlFor="senha">Senha</label> */}
+                <Field
+                  name="senha"
+                  type="password"
+                  className="input"
+                  placeholder="Password"
+                />
+                <ErrorMessage name="senha" />
+              </div>
 
-            <button type="submit" className="button-form">
-              Submit
-            </button>
+              <button type="submit" className="button-form">
+                Submit
+              </button>
+            </form>
 
-            <p class="signup-link">
-              Has registration?
-              <a class="signup-link link" onClick={() => navigate("/")}>
-                {" "}
-                Return Login
-              </a>
-            </p>
-          </form>
+            <div class="form-section">
+              <p>
+                Has registration?
+                <a class="signup-link link" onClick={() => navigate("/")}>
+                  {" "}
+                  Return Login
+                </a>
+              </p>
+            </div>
+          </div>
         )}
       </Formik>
     </>
