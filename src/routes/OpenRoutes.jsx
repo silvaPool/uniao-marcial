@@ -1,5 +1,5 @@
 import Login from "../components/Login";
-import SignupWithEmail from "../components/SignUp";
+import Cadastro from "../components/SignUp";
 import MainGuard from "../utils/MainGuard";
 
 const OpenRoutes = [
@@ -16,7 +16,7 @@ const OpenRoutes = [
         path: "/cadastro",
         element: (
             <MainGuard>
-                <SignupWithEmail />
+                <Cadastro />
             </MainGuard>
         )
     }
