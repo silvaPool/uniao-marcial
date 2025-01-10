@@ -107,7 +107,7 @@ const Login = () => {
         </form>
         <div class="form-section">
           <p>
-          Tenha uma conta? <a onClick={() => navigate("/login")}>Conecte-se</a>{" "}
+          Tenha uma conta? <a onClick={() => navigate("/usuario")}>Conecte-se</a>{" "}
           </p>
         </div>
       </div>

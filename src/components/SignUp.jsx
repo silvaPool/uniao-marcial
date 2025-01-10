@@ -47,6 +47,10 @@ const SignupWithEmail = () => {
       );
       const user = userCredential.user;
       console.log(user);
+
+      if (user) {
+        navigate("/usuario")
+      }
     } catch (error) {
       const errorCode = error.errorCode;
       const errorMessage = error.message;
