@@ -1,3 +1,4 @@
+import { Navigate } from "react-router";
 import Login from "../components/Login";
 import PaginaLogin from "../components/PaginaLogin";
 import Cadastro from "../components/SignUp";
@@ -8,25 +9,18 @@ const OpenRoutes = [
     path: "/",
     element: (
       <MainGuard>
+        {/* <Navigate to="/" replace /> */}
         <PaginaLogin />
       </MainGuard>
     ),
   },
   {
     path: "/login",
-    element: (
-      <MainGuard>
-        <Login />
-      </MainGuard>
-    ),
+    element: <Login />,
   },
   {
     path: "/cadastro",
-    element: (
-      <MainGuard>
-        <Cadastro />
-      </MainGuard>
-    ),
+    element: <Cadastro />,
   },
 ];
 

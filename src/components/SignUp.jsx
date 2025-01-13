@@ -1,16 +1,14 @@
 import { useContext, useState } from "react";
-import { Outlet, useNavigate } from "react-router";
+import { useNavigate } from "react-router";
 import { AuthContext } from "../context/AuthContext";
 import { ErrorMessage, Field, Formik } from "formik";
 import * as Yup from "yup";
 
-const Cadastro = () => {
-  const { signUp, user, signed } = useContext(AuthContext);
+const Cadastro = ({ onToggleLogin }) => {
+  const { signUp } = useContext(AuthContext);
   const [isLogin, setIsLogin] = useState(false);
 
   const navigate = useNavigate();
-
-  // const handleSubmit = isLogin ? handleSignIn : handleSignup;
 
   return (
     <>
@@ -69,7 +67,7 @@ const Cadastro = () => {
             <div class="form-section">
               <p>
                 Has registration?
-                <a class="signup-link link" onClick={() => navigate("/")}>
+                <a class="signup-link link" onClick={onToggleLogin}>
                   {" "}
                   Return Login
                 </a>

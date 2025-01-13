@@ -3,12 +3,14 @@ import { useNavigate } from "react-router";
 import { AuthContext } from "../context/AuthContext";
 import { ErrorMessage, Field, Formik } from "formik";
 import * as Yup from "yup";
+import Cadastro from "./SignUp";
 
-const Login = () => {
-  const { login, user, signed } = useContext(AuthContext);
+const Login = ({ onToggleSignUp }) => {
+  const { login } = useContext(AuthContext);
   const navigate = useNavigate();
+  const [isLogin, setIsLogin] = useState(true);
 
-  return (
+  return isLogin ? (
     <>
       <Formik
         initialValues={{ email: "", senha: "" }}
@@ -68,10 +70,7 @@ const Login = () => {
             <div class="form-section">
               <p class="signup-link">
                 Don't have an account?
-                <a
-                  class="signup-link link"
-                  onClick={() => navigate("/cadastro")}
-                >
+                <a class="signup-link link" onClick={onToggleSignUp}>
                   {" "}
                   Sign up now
                 </a>
@@ -81,6 +80,8 @@ const Login = () => {
         )}
       </Formik>
     </>
+  ) : (
+    <Cadastro />
   );
 };
 
