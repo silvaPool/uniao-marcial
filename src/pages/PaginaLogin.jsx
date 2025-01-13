@@ -1,5 +1,5 @@
 import { Box, Button, Typography } from "@mui/material";
-import StyledBoxLogin from "./StyledBoxLogin";
+import StyledBoxLogin from "../components/StyledBoxLogin";
 import Cadastro from "./SignUp";
 import Login from "./Login";
 import { useState } from "react";
