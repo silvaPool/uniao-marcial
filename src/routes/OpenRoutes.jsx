@@ -1,7 +1,7 @@
 import { Navigate } from "react-router";
-import Login from "../components/Login";
-import PaginaLogin from "../components/PaginaLogin";
-import Cadastro from "../components/SignUp";
+import Login from "../pages/Login";
+import PaginaLogin from "../pages/PaginaLogin";
+import Cadastro from "../pages/SignUp";
 import MainGuard from "../utils/MainGuard";
 
 const OpenRoutes = [

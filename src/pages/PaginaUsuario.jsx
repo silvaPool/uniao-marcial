@@ -6,12 +6,13 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
+import Teste from "./Teste";
 
 export default function PaginaUsuario() {
   return (
     <>
       <Box sx={{ flexGrow: 1 }}>
-        <AppBar position="static" sx={{background: 'black'}}>
+        <AppBar position="static" sx={{ background: "red" }}>
           <Toolbar>
             <IconButton
               size="large"
@@ -30,9 +31,7 @@ export default function PaginaUsuario() {
         </AppBar>
       </Box>
 
-      <Box sx={{  border: '1px solid white', background: 'black', borderRadius: '10px', width: '15vw', height: '70vh', marginTop: '20px', marginLeft: '10px'}}>
-
-      </Box>
+      <Teste />
     </>
   );
 }
