@@ -11,6 +11,10 @@ const StyledBoxUmTeste = styled(Box)`
     height: 75vh;
     margin-top: 20px;
     margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
   }
 `;
 
