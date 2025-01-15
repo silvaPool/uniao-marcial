@@ -16,13 +16,21 @@ function Teste() {
         <button class="button type1">
           <span class="btn-txt">Teste</span>
         </button>
-        <Button>Teste</Button>
-        <Button>Teste</Button>
-        <Button>Teste</Button>
-        <Button>Teste</Button>
+        <button class="button type1">
+          <span class="btn-txt">Teste</span>
+        </button>
+        <button class="button type1">
+          <span class="btn-txt">Teste</span>
+        </button>
+        <button class="button type1">
+          <span class="btn-txt">Teste</span>
+        </button>
+        <button class="button type1">
+          <span class="btn-txt">Teste</span>
+        </button>
       </StyledBoxUmTeste>
 
-      <StyledBoxDoisTeste sx={{ background: "blue" }}></StyledBoxDoisTeste>
+      <StyledBoxDoisTeste></StyledBoxDoisTeste>
     </Box>
   );
 }

@@ -5,7 +5,7 @@ const StyledBoxUmTeste = styled(Box)`
   && {
     border: 1px solid white;
     color: white;
-    background: #ff6357;
+    background: #54588e;
     border-radius: 10px;
     width: 15vw;
     height: 75vh;
@@ -15,6 +15,7 @@ const StyledBoxUmTeste = styled(Box)`
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    padding: 5px;
   }
 `;
 

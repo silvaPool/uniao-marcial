@@ -5,7 +5,7 @@ const StyledBoxDoisTeste = styled(Box)`
   && {
     border: 1px solid white;
     color: white;
-    background: #ff6357;
+    background: #54588e;
     border-radius: 10px;
     width: 75vw;
     height: 75vh;
