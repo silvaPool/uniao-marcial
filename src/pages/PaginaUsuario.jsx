@@ -7,6 +7,7 @@ import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import Teste from "./Teste";
+import BasicMenu from "./FuncoesLayoutUsuario";
 
 export default function PaginaUsuario() {
   return (
@@ -26,7 +27,7 @@ export default function PaginaUsuario() {
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
               News
             </Typography>
-            <Button color="inherit">Login</Button>
+            <BasicMenu />
           </Toolbar>
         </AppBar>
       </Box>
