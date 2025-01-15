@@ -1,12 +1,12 @@
-import { createBrowserRouter, RouterProvider } from "react-router";
-import OpenRoutes from "./OpenRoutes";
-import PrivateRoutes from "./PrivateRoutes";
-import AdminRoutes from "./AdminRoutes";
+// import { createBrowserRouter, RouterProvider } from "react-router";
+// import OpenRoutes from "./OpenRoutes";
+// import PrivateRoutes from "./PrivateRoutes";
+// import AdminRoutes from "./AdminRoutes";
 
-function Routes() {
-    const router = createBrowserRouter([...OpenRoutes, ...PrivateRoutes, ...AdminRoutes]);
+// function Routes() {
+//     const router = createBrowserRouter([...OpenRoutes, ...PrivateRoutes, ...AdminRoutes]);
 
-    return (<RouterProvider router={router} />)
-}
+//     return (<RouterProvider router={router} />)
+// }
 
-export default Routes;
+// export default Routes;
