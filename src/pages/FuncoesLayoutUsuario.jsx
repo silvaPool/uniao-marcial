@@ -3,11 +3,11 @@ import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import { useContext } from "react";
-import { AuthContext } from "../context/AuthContext";
+// import { AuthContext } from "../context/AuthContext";
 
 export default function BasicMenu() {
 
-    const { logout } = useContext(AuthContext);
+    // const { logout } = useContext(AuthContext);
 
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
