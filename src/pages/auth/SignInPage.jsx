@@ -14,6 +14,19 @@ const SignInPage = () => {
     password: "",
   });
 
+ const resendConfirmationEmail = async ()=> {
+  try {
+    const {error} = await supabase.auth.resetPasswordForEmail(formValues.email.trim());
+    if (error) {
+      alert("Erro ao reenviar e-mail de confirmação: "  + error.message);
+    } else {
+      alert("E-mail de confirmação reenviado. Verifique sua caixa de entrada.");
+    }
+  } catch (error) {
+    console.log("Erro ao reenviar o e-mail de confirmação", error);
+  }
+ }
+
   const handleInputChange = (e) => {
     setFormValues({ ...formValues, [e.target.name]: e.target.value });
   };
@@ -30,6 +43,8 @@ const SignInPage = () => {
     }
     setStatus("");
   };
+
+
 
   return (
     <main>
@@ -51,6 +66,9 @@ const SignInPage = () => {
           placeholder="Password"
         />
         <button type="submit">Login</button>
+        <button>
+          Reenviar e-mail de confirmação
+        </button>
         <Link className="auth-link" to="/auth/sign-up">
         Don't have an account? Sign Up
         </Link>

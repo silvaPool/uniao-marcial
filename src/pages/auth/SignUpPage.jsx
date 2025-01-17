@@ -14,6 +14,8 @@ const SignUpPage = () => {
     password: "",
   });
 
+  console.log(formValues);
+
   const handleInputChange = (e) => {
     setFormValues({ ...formValues, [e.target.name]: e.target.value });
   };
