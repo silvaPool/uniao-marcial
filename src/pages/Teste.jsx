@@ -9,25 +9,19 @@ function Teste() {
         display: "flex",
         justifyContent: "space-between",
         alignItems: "center",
-        padding: "15px",
+        padding: "25px",
       }}
     >
       <StyledBoxUmTeste>
-        <button class="button type1">
-          <span class="btn-txt">Teste</span>
-        </button>
-        <button class="button type1">
-          <span class="btn-txt">Teste</span>
-        </button>
-        <button class="button type1">
-          <span class="btn-txt">Teste</span>
-        </button>
-        <button class="button type1">
-          <span class="btn-txt">Teste</span>
-        </button>
-        <button class="button type1">
-          <span class="btn-txt">Teste</span>
-        </button>
+        <button class="buttonNavegacao">Button</button>
+
+        <button class="buttonNavegacao">Button</button>
+
+        <button class="buttonNavegacao">Button</button>
+
+        <button class="buttonNavegacao">Button</button>
+
+        <button class="buttonNavegacao">Button</button>
       </StyledBoxUmTeste>
 
       <StyledBoxDoisTeste></StyledBoxDoisTeste>

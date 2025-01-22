@@ -40,7 +40,7 @@ export default function BasicMenu() {
       >
         <MenuItem onClick={handleClose}>Perfil</MenuItem>
         <MenuItem onClick={handleClose}>Minha conta</MenuItem>
-        <MenuItem onClick={logout}>Sair</MenuItem>
+        <MenuItem>Sair</MenuItem>
       </Menu>
     </div>
   );

@@ -13,7 +13,7 @@ export default function PaginaUsuario() {
   return (
     <>
       <Box sx={{ flexGrow: 1 }}>
-        <AppBar position="static" sx={{ background: "#232c4b" }}>
+        <AppBar position="static" sx={{ background: "white", color: 'black' }}>
           <Toolbar>
             <IconButton
               size="large"

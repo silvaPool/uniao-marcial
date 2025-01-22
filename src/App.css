@@ -1,3 +1,5 @@
+@import "https://unpkg.com/open-props";
+
 * {
   padding: 0;
   margin: 0;
@@ -92,25 +94,46 @@
 }
 
 /* BUTTON */
-/* From Uiverse.io by Gaurav-WebDev */ 
-.button {
-  height: 50px;
-  width: 100%;
-  position: relative;
-  background-color: transparent;
-  cursor: pointer;
-  border: 1px solid white;
-  border-radius: 30px;
-  color: white;
-  transition: all 0.5s ease-in-out;
+.buttonNavegacao {
+  appearance: none;
+ background-color: transparent;
+ border: 0.125em solid #84A9FF;
+ border-radius: 0.9375em;
+ box-sizing: border-box;
+ color: #3B3B3B;
+ cursor: pointer;
+ display: inline-block;
+ font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+ font-size: 16px;
+ font-weight: 600;
+ line-height: normal;
+ margin: 0;
+ min-height: 1em;
+ width: 10em;
+ outline: none;
+ padding: 1em 2.3em;
+ text-align: center;
+ text-decoration: none;
+ transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+ user-select: none;
+ -webkit-user-select: none;
+ touch-action: manipulation;
+ will-change: transform;
 }
 
-.btn-txt {
-  z-index: 1;
-  font-weight: 800;
-  letter-spacing: 4px;
+.buttonNavegacao:disabled {
+  pointer-events: none;
 }
 
-.button:hover {
-  transform: scale(1.03);
+.buttonNavegacao:hover {
+  color: #fff;
+  background-color: #84A9FF;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
 }
+
+.buttonNavegacao:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+

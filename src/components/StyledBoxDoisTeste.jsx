@@ -3,9 +3,9 @@ import styled from "styled-components";
 
 const StyledBoxDoisTeste = styled(Box)`
   && {
-    border: 1px solid white;
     color: white;
-    background: #54588e;
+    background: #84A9FF;
+    box-shadow: 10px 5px 5px #ADC8FF;
     border-radius: 10px;
     width: 75vw;
     height: 75vh;
@@ -14,6 +14,7 @@ const StyledBoxDoisTeste = styled(Box)`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transform: perspective(500px);
   }
 `;
 

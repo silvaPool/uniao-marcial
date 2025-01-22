@@ -1,11 +1,15 @@
 import "./App.css";
 import { RouterProvider } from "react-router";
 import router from "./routes";
+import PaginaUsuario from "./pages/PaginaUsuario"
+
 
 function App() {
   return (
     <>
-      <RouterProvider router={router} />
+      {/* <RouterProvider router={router} /> */}
+      <PaginaUsuario />
+      
     </>
   );
 }
