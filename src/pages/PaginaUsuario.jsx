@@ -8,12 +8,13 @@ import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import Teste from "./Teste";
 import BasicMenu from "./FuncoesLayoutUsuario";
+import { Outlet } from "react-router";
 
 export default function PaginaUsuario() {
   return (
     <>
       <Box sx={{ flexGrow: 1 }}>
-        <AppBar position="static" sx={{ background: "white", color: 'black' }}>
+        <AppBar position="static" sx={{ background: "white", color: "black" }}>
           <Toolbar>
             <IconButton
               size="large"
@@ -32,7 +33,9 @@ export default function PaginaUsuario() {
         </AppBar>
       </Box>
 
-      <Teste />
+      {/* <Teste /> */}
+
+      <Outlet />
     </>
   );
 }

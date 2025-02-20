@@ -5,9 +5,9 @@ import { useNavigate } from "react-router";
 
 function Teste() {
 
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
-  const handlerClick = () => navigate("/exemplo");
+  // const handlerClick = () => navigate("/exemplo");
 
   return (
     <Box
@@ -19,7 +19,7 @@ function Teste() {
       }}
     >
       <StyledBoxUmTeste>
-        <button class="buttonNavegacao" onClick={handlerClick}>Button</button>
+        <button class="buttonNavegacao">Button</button>
 
         <button class="buttonNavegacao">Button</button>
 

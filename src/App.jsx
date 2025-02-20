@@ -7,8 +7,8 @@ import PaginaUsuario from "./pages/PaginaUsuario"
 function App() {
   return (
     <>
-      {/* <RouterProvider router={router} /> */}
-      <PaginaUsuario />
+      <RouterProvider router={router} />
+      {/* <PaginaUsuario /> */}
       
     </>
   );
