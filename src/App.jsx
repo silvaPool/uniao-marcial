@@ -1,14 +1,13 @@
 import "./App.css";
-import { RouterProvider } from "react-router";
-import router from "./routes";
-import PaginaUsuario from "./pages/PaginaUsuario"
+import LoginButton from "./components/LoginButton";
+
 
 
 function App() {
   return (
     <>
-      <RouterProvider router={router} />
-      {/* <PaginaUsuario /> */}
+      
+      <LoginButton />
       
     </>
   );
